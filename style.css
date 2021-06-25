@@ -1,11 +1,13 @@
 header{
-    background-color: grey;
+    color: white;
+    background-color: rgb(58, 172, 248);
     padding: 8px;
 }
 
 .agenda-container{
     width: 100%;
     padding: 0 64px;
+    background-color: whitesmoke;
 
     height: 100%;
     display: flex;
@@ -19,7 +21,7 @@ header{
 }
 
 .agenda-block-title{
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     width: 100%;
     text-align: center;
 }

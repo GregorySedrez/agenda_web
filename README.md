@@ -49,7 +49,8 @@ Abra o arquivo ```agenda.html```
 ## 🚀O que foi implementado
 - Na aplicação o usuário tem visão de todos contatos da agenda, todos os grupos de contatos e todos os eventos;
 - É possível adicionar novos contatos, novos grupos de contatos e novos eventos;
-- As datas de criação e atualização optei por deixar omitidas, visto que elas devem ser setadas automaticamente no momento de criação ou atualização.
+- As datas de criação e atualização optei por deixar omitidas, visto que elas devem ser setadas automaticamente no momento de criação ou atualização;
+- Todas as rotas foram testadas utilizando a plataforma web para APIs [Postman](https://www.postman.com/).
 
 ## 🚧O que falta implementar
 - Ainda não é possível adicionar contatos em grupos ou eventos, porém, as rotas já estão criadas no arquivo ```route.js```;

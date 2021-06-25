@@ -1,0 +1,32 @@
+header{
+    background-color: grey;
+    padding: 8px;
+}
+
+.agenda-container{
+    width: 100%;
+    padding: 0 64px;
+
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.agenda-block{
+    width: 33%;
+    margin: 0 24px;
+    margin-bottom: 24px;
+}
+
+.agenda-block-title{
+    margin-bottom: 24px;
+    width: 100%;
+    text-align: center;
+}
+
+.agenda-block-button{
+    margin-top: 24px;
+    width: 100%;
+    
+    text-align: center;
+}

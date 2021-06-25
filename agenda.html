@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="scripts.js"></script>
+    <title>Agenda</title>
+  </head>
+  <body>
+      <header>
+          <h1>Agenda</h1>
+      </header>
+    </main>
+        <div class="agenda-container">
+
+            <div class="agenda-block">
+                <h2 class="agenda-block-title">Contatos</h2>
+                <ul class="list-group" id="contacts"></ul>
+
+                <button type="button" class="btn btn-primary agenda-block-button" data-toggle="modal" data-target="#modalContacts">
+                    Adicionar Contato
+                </button>
+            </div>
+            <div class="agenda-block">
+                <h2 class="agenda-block-title">Grupos de Contatos</h2>
+                <ul class="list-group" id="grupo"></ul>
+                <button type="button" class="btn btn-primary agenda-block-button" data-toggle="modal" data-target="#modalGrupo">
+                    Criar Grupo
+                </button>
+            </div>
+            <div class="agenda-block">
+                <h2 class="agenda-block-title">Eventos</h2>
+                <ul class="list-group"  id="evento"></ul>
+                <button type="button" class="btn btn-primary agenda-block-button" data-toggle="modal" data-target="#modalEvento">
+                    Criar Evento
+                </button>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalContacts" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Cadastro de Contato</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formContato">
+                        <div class="form-group">
+                            <label for="cpf">CPF</label>
+                            <input type="cpf" class="form-control" id="cpf">
+                            <small id="cpfHelp" class="form-text text-muted">Apenas Números</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="Nome">Nome</label>
+                          <input type="nome" class="form-control" id="nomeContato">
+                        </div>
+                        <div class="form-group">
+                            <label for="sobrenome">Sobrenome</label>
+                            <input type="sobrenome" class="form-control" id="sobrenome">
+                        </div>
+                        <div class="form-group">
+                            <label for="celular">Celular</label>
+                            <input type="celular" class="form-control" id="celular">
+                            <small id="celHelp" class="form-text text-muted">Apenas Números</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        
+                      </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                  <button type="button" class="btn btn-primary" onclick=criaContato()>Add Contato</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+
+        <div class="modal fade" id="modalGrupo" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cadastro de Contato</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formGrupo">
+                        <div class="form-group">
+                            <label for="idGrupo">ID</label>
+                            <input type="idGrupo" class="form-control" id="idGrupo">
+                            <small id="idGrupoHelp" class="form-text text-muted">Apenas Números</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="NomeGrupo">Nome do Grupo</label>
+                            <input type="nomeGrupo" class="form-control" id="nomeGrupo">
+                        </div>    
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" onclick=criaGrupo()>Criar Grupo</button>
+                </div>
+            </div>
+          </div>
+      </div>
+
+
+        <div class="modal fade" id="modalEvento" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cadastro de Contato</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formEvento">
+                        <div class="form-group">
+                            <label for="idEvento">ID</label>
+                            <input type="idEvento" class="form-control" id="id">
+                            <small id="idEventoHelp" class="form-text text-muted">Apenas Números</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="NomeEvento">Nome do Grupo</label>
+                            <input type="nomeEvento" class="form-control" id="nomeEvento">
+                        </div>
+                        <div class="form-group">
+                            <label for="dataEvento">Data</label>
+                            <input type="dataEvento" class="form-control" id="dataEvento">
+                            <small id="dataEventoHelp" class="form-text text-muted">AAAA-MM--DD</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="horaEvento">Hora</label>
+                            <input type="horaEvento" class="form-control" id="hora">
+                            <small id="horaEventoHelp" class="form-text text-muted">hh:mm:ss</small>
+                        </div>     
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" onclick=criaEvento()>Criar Evento</button>
+                </div>
+            </div>
+          </div>
+      </div>
+
+        
+    <main>
+        
+        
+    
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
+
+
+
